@@ -206,7 +206,7 @@ body.addEventListener("click", function () {
     modal.classList.remove("active_modal");
   }
 });
-let gg = "Hello";
+
 function firstNonRepeatingLetter(s) {
   // Add your code here
   let res = s.toUpperCase();
