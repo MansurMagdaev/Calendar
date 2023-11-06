@@ -1,0 +1,314 @@
+body {
+    text-align: center;
+    align-items: center;
+}
+.parent {
+    background-color: rgb(0, 0, 0);
+    width: 300px;
+    height: 440px;
+    margin: 100px auto;
+    padding: 15px;
+    border: 3px solid rgb(41, 21, 129);
+    border-radius: 10px;
+    box-shadow: 10px 5px 10px #000;
+    position: relative;
+}
+
+.white_block {
+    width: 1500px;
+    height: 200px;
+    background-color: #fff;
+    position: absolute;
+    top: -105px;
+    left: 0px;
+    z-index: 3;
+}
+
+/* ------------------Года-------------------------------- */
+
+.year {
+    position: relative;
+}
+
+.selected_year { 
+    font-size: 28px;
+    font-family: Arial;
+    margin: 15px 0px;
+    padding: 3px 10px;
+    border-width: 0;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid rgb(15, 1, 78);
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.selected_year:hover {
+    background-color: navy;
+    transition: 0.5s;
+}
+
+.modal_years {
+    width: 296px;
+    height: 150px;
+    background-color: #000;
+    position: absolute;
+    top: -190px;
+    border: 2px solid navy;
+    border-radius: 15px;
+    box-shadow: 5px 2px 6px rgb(65, 9, 9);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.active_modal {
+    top: 0px;
+    transition: 0.5s;
+}
+
+.list_years {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev_years {
+    background-color: #fff;
+    width: 0px;
+    height: 0px;
+    margin: 10px 5px;
+    border: 7px solid #000; border-right: 18px solid #fff;
+}
+
+.prev_years:hover {
+    cursor: pointer;
+}
+
+.years {
+    color: #fff;
+    font-size: 23px;
+    font-family: Georgia;
+}
+
+.next_years {
+    background-color: #fff;
+    width: 0px;
+    height: 0px;
+    margin: 10px 5px;
+    border: 7px solid #000; border-left: 18px solid #fff;
+}
+
+.next_years:hover {
+    cursor: pointer;
+}
+
+.choose_year {
+    color: #fff;
+    font-size: 18px;
+    font-family: Georgia;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4px 0px;
+}
+
+.choose_year span {
+    flex: 0 0 33%;
+    margin: 2px 0px;
+    cursor: pointer;
+}
+
+
+/* ------------------Месяца-------------------------------- */
+
+.prev_btn {
+    position: relative;
+    cursor: pointer;
+}
+.next_btn {
+    position: relative;
+    cursor: pointer;
+
+}
+
+.prev_btn span::after {
+    content: '';
+    width: 24px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 14px;
+    left: -15px;
+}
+
+.prev_btn::after {
+    content: '';
+    width: 16px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 19px;
+    left: -20px;
+    transform: rotate(45deg);
+}
+.prev_btn::before {
+    content: '';
+    width: 16px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    transform: rotate(-45deg);
+}
+.next_btn span::after {
+    content: '';
+    width: 24px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 14px;
+    left: 0px;
+}
+
+.next_btn::after {
+    content: '';
+    width: 16px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 19px;
+    left: 14px;
+    transform: rotate(-45deg);
+}
+.next_btn::before {
+    content: '';
+    width: 16px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    transform: rotate(45deg);
+}
+
+.month {
+    display: flex;
+    justify-content: space-around;
+}
+
+.month span {
+    font-size: 20px;
+    color: #fff;
+
+}
+
+/* ------------------Дни-------------------------------- */
+
+
+.day_week {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.day_week span{
+    color: #fff;
+    font-family: Verdana;
+}
+
+.days {
+    color: #fff;
+    font-size: 23px;
+    font-family: Georgia;
+}
+
+.days table tr td{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.active {
+    background-color: rgb(6, 6, 129);
+    border-radius: 24%;
+}
+
+/* ------------------Напоминание-------------------------------- */
+
+
+.modal-reminder {
+    background-color: #000;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    padding: 15px;
+    top: 80px;
+    left: -160px;
+    border: 3px solid rgb(41, 21, 129);
+    border-radius: 10px;
+    box-shadow: 10px 5px 10px #000;
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.close_modal {
+    position: absolute;
+    background-color: #fff;
+    width: 32px;
+    height: 3px;
+    top: 50px;
+    left: 20px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+.close_modal::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 32px;
+    height: 3px;
+    top: 0px;
+    left: 0px;
+    transform: rotate(90deg);
+}
+
+.confirm_modal {
+    position: absolute;
+    background-color: #fff;
+    width: 32px;
+    height: 3px;
+    top: 50px;
+    left: 280px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+/* .confirm_modal::before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 32px;
+    height: 3px;
+    top: 50px;
+    left: 280px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+} */
+
+.confirm_modal::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 16px;
+    height: 3px;
+    top: -7px;
+    left: -7px;
+    transform: rotate(90deg);
+
+}
+
+.modal_reminder_deactive {
+    display: none;
+}
